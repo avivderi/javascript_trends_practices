@@ -34,3 +34,6 @@ arr3.splice(1,2)
 console.log(arr3)
 
 32.
+const arr4 = [1,2[3,4]]
+const arrFlat = arr4.flat()
+console.log(arrFlat)
