@@ -17,3 +17,8 @@ console.log(filterPrices)
 const duble = [1,2,3]
 const reduceDuble = duble.reduce((acc, current) => acc * current, 1)
 console.log(reduceDuble)
+
+12.
+const ages = [21,25,51,23,24,26,28,29,30,18]
+const reduceAges = ages.reduce((acc, current) => acc + current, 0)
+console.log(reduceAges / ages.length)
