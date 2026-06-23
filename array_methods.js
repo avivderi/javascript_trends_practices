@@ -55,3 +55,23 @@ const dictReduce = item.reduce((acc,current) => {
     return acc;
 }, {});
 console.log(dictReduce)
+
+39.
+const arr5 = [1,2,3,4,5,6,7,6,5,4,3,2]
+const newArr = []
+for (const num of arr5) {
+if (newArr.includes(num)){
+    console.log("you have duble number"); break}
+else {newArr.push(num)}}
+console.log(newArr)
+
+41.
+const products = [
+  { name: "Laptop", price: 800, inStock: true,  category: "tech"    },
+  { name: "Phone",  price: 400, inStock: false, category: "tech"    },
+  { name: "iPhone",  price: 4000, inStock: true, category: "tech"    },
+  { name: "Shirt",  price: 50,  inStock: true,  category: "fashion" }
+];
+
+const result = products.filter(product => product.inStock === true && product.price > 100).sort((a, b) => a.price-b.price) .map(product => product.name) .join()
+console.log(result)
