@@ -1,1 +1,0 @@
-# javascript_trends_practices
