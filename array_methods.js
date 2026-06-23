@@ -12,3 +12,8 @@ console.log(arr)
 const prices = [841,4,16,61,421,8,451,250,100]
 const filterPrices = prices.filter(num => num > 100) .map(num => num * 1.1)
 console.log(filterPrices)
+
+10.
+const duble = [1,2,3]
+const reduceDuble = duble.reduce((acc, current) => acc * current, 1)
+console.log(reduceDuble)
