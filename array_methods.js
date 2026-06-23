@@ -44,3 +44,14 @@ const evens = chain.filter(num => num % 2 === 0)
 .map(num => num * 2)
 .reduce((acc, current) => acc + current , 0)
 console.log(evens)
+
+38.
+const item = [{type: "fruit"}, {type: "veg" }, { type: "fruit" }]
+const dictReduce = item.reduce((acc,current) => {
+    const type = current.type;
+    if (!acc[item.type]) {
+        acc[type] = []
+    } acc[type].push(current);
+    return acc;
+}, {});
+console.log(dictReduce)
