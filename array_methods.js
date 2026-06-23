@@ -22,3 +22,8 @@ console.log(reduceDuble)
 const ages = [21,25,51,23,24,26,28,29,30,18]
 const reduceAges = ages.reduce((acc, current) => acc + current, 0)
 console.log(reduceAges / ages.length)
+
+25.
+const arr2 = [1,2,3,4,5,6]
+const arrSort = arr2.sort((a,b) => b-a);
+console.log(arrSort)
