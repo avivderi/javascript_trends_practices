@@ -27,3 +27,10 @@ console.log(reduceAges / ages.length)
 const arr2 = [1,2,3,4,5,6]
 const arrSort = arr2.sort((a,b) => b-a);
 console.log(arrSort)
+
+29.
+const arr3 = [1,2,3,4,5]
+arr3.splice(1,2)
+console.log(arr3)
+
+32.
