@@ -8,3 +8,7 @@ const num = [1, 2, 3, 4, 5, 6]
 const arr = num.filter(num => num % 2 === 0)
 console.log(arr)
 
+8.
+const prices = [841,4,16,61,421,8,451,250,100]
+const filterPrices = prices.filter(num => num > 100) .map(num => num * 1.1)
+console.log(filterPrices)
