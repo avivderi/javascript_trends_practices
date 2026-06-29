@@ -1,92 +1,132 @@
-import readline from "readline"
-import { stdin as input, stdout as output } from "process"
-import { createCustomer, showCustomers, deposit, withdraw, searchCustomers, closeAccount, showStatistics } from "./manager.js"
+import input from "analiza-sync";
+import { isValidName,isValidBalance,isValidId,isValidTypeAcount, checkAmount } from "./utils.js";
+import { createCustomer,showCustomer,Deposit,Withdraw,SearchCustomer,CloseAccount,showStatistics } from "./manager.js";
 
-const rl = readline.createInterface({ input, output })
-
-function showMenu() {
-    console.log("\n===== BANK MENU =====")
-    console.log("1. Create Customer")
-    console.log("2. Show Customers")
-    console.log("3. Deposit")
-    console.log("4. Withdraw")
-    console.log("5. Search Customer")
-    console.log("6. Close Account")
-    console.log("7. Show Statistics")
-    console.log("8. Exit")
-    
-    rl.question("\nChoose an option (1-8): ", main)
+function menu(){
+    console.log("===== Menu =====")
+    console.log("to create customer press:1")
+    console.log("to show customer press:2")
+    console.log("to deposit press:3")
+    console.log("to withdraw press:4")
+    console.log("to search customer press:5")
+    console.log("to close acount press:6")
+    console.log("to show statistics press:7")
+    console.log("to Exit press:8")
+    const choice = Number(input("press your choice "))
+    return choice
 }
 
-function main(choice) {
-    switch (choice.trim()) {
-        case "1":
-            rl.question("Enter full name: ", (name) => {
-                rl.question("Enter account type (Regular, Premium, Student): ", (type) => {
-                    rl.question("Enter initial balance: ", (balance) => {
-                        const createResult = createCustomer(name, type, Number(balance))
-                        console.log(createResult)
-                        showMenu()
-                    })
-                })
-            })
-            break
+function main(){
+    let choice = 0
+    while(choice !== 8){
+        choice = menu()
+        switch(choice){
+            case 1:{
+                let validName = false
+                let fullname
+                while(!validName){
+                    fullname = input("Enter your fullname ")
+                    validName = isValidName(fullname)
+                }
+                let validTypeAcount = false
+                let accountType 
+                while(!validTypeAcount){
+                    accountType = input ("Enter your type account ")
+                    validTypeAcount = isValidTypeAcount(accountType)
+                }
+                let balance
+                let validBalance = false
+                while(!validBalance){
+                    balance = Number(input("Enter your balance "))
+                    validBalance = isValidBalance(balance)
+                }
+                const customer = createCustomer(fullname,accountType,balance)
+                console.log(customer())
+                break
+            }
+            case 2:{
+                console.table(showCustomer())
+                break
+            }
+            case 3:{
+                let customerId
+                let validCustomerId = false
+                while(!validCustomerId){
+                    customerId = Number(input("Enter customer id "))
+                    validCustomerId = isValidId(customerId)
+                }
+                let amount
+                let validAmount = false
+                while(!validAmount){
+                    amount= Number(input("Enter your amount "))
+                    validAmount = checkAmount(amount)
+                }
+                console.log(Deposit(customerId,amount))
+                break
+            }
+            case 4:{
+                let customerId
+                let validCustomerId = false
+                while(!validCustomerId){
+                    customerId = Number(input("Enter customer id "))
+                    validCustomerId = isValidId(customerId)
+                }
+                let amount
+                let validAmount = false
+                while(!validAmount){
+                    amount= Number(input("Enter your amount "))
+                    validAmount = checkAmount(amount)
+                }
+                console.log(Withdraw(customerId,amount))
+                break
+            }
+            case 5:{
+                let customerId
+                let fullname
+                let validName = false
+                let validCustomerId = false
+                while(!validCustomerId && !validName){
+                    customerId = Number(input("Enter customer id "))
+                    fullname = input("Enter your name ")
+                    validCustomerId = isValidId(customerId)
+                    validName = isValidName(fullname)
+                }
+                console.log(SearchCustomer(customerId,fullname))
+                break
+            }
+            case 6:{
+                let customerId
+                let validCustomerId = false
+                while(!validCustomerId){
+                    customerId = Number(input("Enter customer id "))
+                    validCustomerId = isValidId(customerId)
+                }
+                console.log(CloseAccount(customerId))
+                break
+            }
+            case 7:{
+                const customer =showStatistics()
+                console.log(`Total Customers: ${customer.totalCustomer}`) 
+                console.log(`Active Accounts: ${customer.activeAcount}`)
+                console.log(`Total Money: ${customer.totalMoney}`)
+                console.log(`Average Balance: ${customer.AverageBalance}`)
+                console.log(`Highest Balance: ${customer.HigestBalance}`)
+                break
+            }
+            default:{
+                console.log("choice not correct")
+                break
+            }
 
-        case "2":
-            showCustomers()
-            showMenu()
-            break
 
-        case "3":
-            rl.question("Enter customer ID: ", (depositId) => {
-                rl.question("Enter amount to deposit: ", (depositAmount) => {
-                    const depositResult = deposit(Number(depositId), Number(depositAmount))
-                    console.log(depositResult)
-                    showMenu()
-                })
-            })
-            break
 
-        case "4":
-            rl.question("Enter customer ID: ", (withdrawId) => {
-                rl.question("Enter amount to withdraw: ", (withdrawAmount) => {
-                    const withdrawResult = withdraw(Number(withdrawId), Number(withdrawAmount))
-                    console.log(withdrawResult)
-                    showMenu()
-                })
-            })
-            break
 
-        case "5":
-            rl.question("Enter customer ID or Name: ", (searchItem) => {
-                const searchResult = searchCustomers(searchItem)
-                console.log(searchResult)
-                showMenu()
-            })
-            break
 
-        case "6":
-            rl.question("Enter customer ID to close: ", (closeId) => {
-                const closeResult = closeAccount(Number(closeId))
-                console.log(closeResult)
-                showMenu()
-            })
-            break
 
-        case "7":
-            showStatistics()
-            showMenu()
-            break
 
-        case "8":
-            console.log("Goodbye!")
-            rl.close()
-            break
 
-        default:
-            console.log("Invalid option, please try again")
-            showMenu()
-    }
+    }}
+    return " you can't mannager the bank account "
+
 }
-
-showMenu()
+console.log(main())
