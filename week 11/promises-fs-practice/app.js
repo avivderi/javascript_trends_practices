@@ -1,4 +1,5 @@
 import fs from 'fs'
+import fsPromises from 'fs/promises'
 
 // 1.
 // function writeFileAsPromise(filePath, content) {
@@ -114,7 +115,7 @@ Promise.all([   // דרך 2
 
 7.
 function readFileAsPromise(filePath){
-    return fs.readFile(filePath,"utf-8")
+    return fsPromises.readFile(filePath,"utf-8")
 }
 
 readFileAsPromise("data/message.txt")
@@ -123,7 +124,7 @@ readFileAsPromise("data/message.txt")
 
 8.
 function callFile(filePath){
-    return fs.readFile(filePath,"utf-8")
+    return fsPromises.readFile(filePath,"utf-8")
 }
 let body = ""
 callFile("../../callbacks-fs-practice/data/step1.txt")
