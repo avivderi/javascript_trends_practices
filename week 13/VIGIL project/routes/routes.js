@@ -1,3 +1,14 @@
+import {
+    getServer,
+    getHeroesById,
+    getHeroes,
+    getStatistic,
+    createHeroes,
+    searchHeroes,
+    updateHeroes,
+    deleteHeroesById
+    } from "../controllers/controller"
+
 export default {
     'GET': {
         '/health': getServer,
