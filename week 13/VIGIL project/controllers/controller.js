@@ -47,12 +47,12 @@ export async function getStatistic(req, res) {
             byStatus[status] +=1
         }
         const sumThreatLevel = data.reduce((acc, crr) => 
-            acc.threatLevel + crr.threatLevel, 0)
+            acc.threatLevel + crr.threatLevel, data[0])
         const averageThreatLevel = sumThreatLevel / totalHeroes
         const allPower = {}
         for (const obj of data) {
             for (let one of obj.powers) {
-                if (!one in allPower) {
+                if (!(one in allPower)) {
                     allPower[one] = 1
                 } else {
                     allPower[one] += 1
@@ -61,15 +61,18 @@ export async function getStatistic(req, res) {
         }
         let maxValue = 0
         let mostCommonPower = []
-        for (const key, value in allPower) {
+        for (const key in allPower) {
+            const value = allPower[key]
             if (value >= maxValue) {
                 maxValue = value
                 mostCommonPower.push(key)
             }
         }
         const highestThreat = data.reduce((acc, cur) => {
-            if (cur.threatLevel > acc.threatLevel) return cur
-        }, data[0])
+            if (cur.threatLevel > acc.threatLevel) {
+                return cur
+            } return acc
+                }, data[0])
         const newestRecord = data[data.length -1]
         res.send({'success': true, 'data':{
             totalHeroes,
