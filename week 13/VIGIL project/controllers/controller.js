@@ -1,4 +1,5 @@
 import fs from 'fs/promises'
+import z from 'zod'
 
 export function getServer(req, res) {
     try {
@@ -87,3 +88,6 @@ export async function getStatistic(req, res) {
     }
 }
 
+export async function createHeroes(req, res) {
+    
+}
