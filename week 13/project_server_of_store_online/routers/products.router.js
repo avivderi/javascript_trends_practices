@@ -1,5 +1,5 @@
 import express from 'express'
-import { readFiles, writeFiles } from "./readAndWriteFiles";
+import { readFiles, writeFiles } from "../utils/readAndWriteFiles.js";
 import path from 'path'
 
 const folder = 'data'
@@ -8,7 +8,7 @@ const fillPath = path.join(folder, file)
 
 const router = express.Router();
 
-router.get("/products", async (req,res) => {
+router.get("/", async (req,res) => {
     try {
     const { inStock, maxPrice, search } = req.query
     let data = await readFiles(fillPath)

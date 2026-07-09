@@ -1,13 +1,13 @@
 import express from 'express'
 import 'dotenv/config'
 import productsRoutes from './routers/products.router.js';
-import router from './test.js';
 
 const server = express()
 
 const PORT = process.env.PORT 
 
 server.use(express.json())
+server.use('/products', productsRoutes)
 
 server.get('/', (req, res) => {
     try {
@@ -35,4 +35,4 @@ server.use((req, res) => {
     res.status(404).json({ success: false, message: 'Route not found' })
 })
 
-server.listen(PORT, () => console.log('listening in server' + PORT ))
+server.listen(PORT, () => console.log('listening in server'))
