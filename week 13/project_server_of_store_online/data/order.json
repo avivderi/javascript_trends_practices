@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "customerId": "1",
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 1,
+        "price": 450
+      },
+      {
+        "productId": 2,
+        "quantity": 1,
+        "price": 550
+      }
+    ],
+    "total": 1000,
+    "createdAt": "2026-07-02T10:15:30.000Z"
+  },
+  {
+    "id": 2,
+    "customerId": "2",
+    "items": [
+      {
+        "productId": 5,
+        "quantity": 1,
+        "price": 500
+      }
+    ],
+    "total": 500,
+    "createdAt": "2026-07-06T18:22:10.000Z"
+  }
+]

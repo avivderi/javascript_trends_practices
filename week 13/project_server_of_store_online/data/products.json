@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Nike Air Force 1",
+    "price": 450,
+    "stock": 15,
+    "size": 42,
+    "color": "White"
+  },
+  {
+    "id": 2,
+    "name": "Nike Air Max 90",
+    "price": 550,
+    "stock": 8,
+    "size": 44,
+    "color": "Black/White"
+  },
+  {
+    "id": 3,
+    "name": "Nike Dunk Low",
+    "price": 400,
+    "stock": 0,
+    "size": 41,
+    "color": "Panda (Black/White)"
+  },
+  {
+    "id": 4,
+    "name": "Nike Jordan 1 Retro High",
+    "price": 750,
+    "stock": 5,
+    "size": 43,
+    "color": "Chicago (Red/White/Black)"
+  },
+  {
+    "id": 5,
+    "name": "Nike Zoom Pegasus 39",
+    "price": 500,
+    "stock": 20,
+    "size": 45,
+    "color": "Grey/Blue"
+  }
+]
