@@ -1,11 +1,13 @@
 import express from 'express'
 import 'dotenv/config'
-// import productsRoutes from './routers/products.router.js';
+import productsRoutes from './routers/products.router.js';
 import router from './test.js';
 
 const server = express()
 
 const PORT = process.env.PORT 
+
+server.use(express.json())
 
 server.get('/', (req, res) => {
     try {
