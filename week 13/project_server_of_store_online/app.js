@@ -1,6 +1,7 @@
 import express from 'express'
 import 'dotenv/config'
-import productsRoutes from './routers/products.router.js';
+import productsRoutes from './routers/products.router.js'
+import cartRouters from './routers/cart.router.js'
 
 const server = express()
 
@@ -8,6 +9,7 @@ const PORT = process.env.PORT
 
 server.use(express.json())
 server.use('/products', productsRoutes)
+server.use('/cart', cartRouters)
 
 server.get('/', (req, res) => {
     try {
