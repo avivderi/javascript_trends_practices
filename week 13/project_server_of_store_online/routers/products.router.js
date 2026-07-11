@@ -4,14 +4,14 @@ import path from 'path'
 
 const folder = 'data'
 const file = 'products.json'
-const fillPath = path.join(folder, file)
+const fullPath = path.join(folder, file)
 
 const router = express.Router();
 
 router.get("/", async (req,res) => {
     try {
     const { inStock, maxPrice, search } = req.query
-    let data = await readFiles(fillPath)
+    let data = await readFiles(fullPath)
     if (inStock) {
         data = data.filter((product) => product.stock > 0)
     }
