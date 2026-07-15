@@ -4,14 +4,12 @@ const pool = mysql.createPool({
     host: "localhost",
     port: 3307,
     user: "root",
-    password: "root"
+    password: "root",
+    database: "my_db_name"
 })
 
 async function createTable() {
     try {
-        await pool.execute(`CREATE database if not exists my_db_name`)
-        await pool.execute(`use my_db_name`)
-
         await pool.execute(`
             CREATE TABLE if not exists users(
             id INTEGER PRIMARY KEY,
@@ -41,7 +39,6 @@ async function createTable() {
 
 async function insertTable() {
     try {
-        await pool.execute(`use my_db_name`)
         await pool.execute(`
             INSERT IGNORE INTO users VALUES (
             1,'Alice',10),
@@ -69,5 +66,33 @@ async function insertTable() {
     }
 }
 
-await createTable()
-await insertTable()
+async function run() {
+    await createTable();
+    await insertTable();
+
+    console.log("\n--- Showing Databases ---");
+    const [databases] = await pool.execute("SHOW DATABASES");
+    console.table(databases);
+
+    console.log("\n--- Showing Tables in my_db_name ---");
+    const [tables] = await pool.execute("SHOW TABLES");
+    console.table(tables);
+
+    console.log("\n====== TABLE: users ======");
+    const [users] = await pool.execute("SELECT * FROM users");
+    console.table(users);
+
+    console.log("\n====== TABLE: orders ======");
+    const [orders] = await pool.execute("SELECT * FROM orders");
+    console.table(orders);
+
+    console.log("\n====== TABLE: cities ======");
+    const [cities] = await pool.execute("SELECT * FROM cities");
+    console.table(cities);
+
+    console.log("\nClosing connection pool...");
+    await pool.end();
+    console.log("Terminal is free! 👋");
+}
+
+run();
