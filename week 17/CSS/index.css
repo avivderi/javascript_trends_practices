@@ -1,0 +1,160 @@
+/* 1. טעינת הפונט המלאה מ-Google Fonts (חובה להשתמש בכתובת המלאה עם טווח המשקלים) */
+@import url('https://googleapis.com');
+
+/* 2. הגדרת משתני מערכת (תיקון: משתנים מכילים רק ערכים כמו צבעים או גדלים, לא שמות של קלאסים) */
+:root {
+    --color-page: white;
+    --color-container: #F3F5FB;
+    --bold-weight: 800; /* שומרים את ערך המשקל למשקל עבה */
+
+}
+
+/* 3. קלאסים גנריים לפונטים וגדלים */
+.google-sans-text {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+.main-title {
+  font-size: 42px;
+  font-weight: 800; 
+}
+
+.sub-title {
+  font-size: 24px;
+  font-weight: 600; 
+}
+
+.paragraph {
+  font-size: 16px;
+  font-weight: 400; 
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: 300; 
+}
+
+/* 4. עיצוב אלמנטים לפי ID */
+
+#header {
+    padding: 15px;
+    color: var(--color-page); /* תיקון: שימוש בפונקציית ()var לקריאת המשתנה */
+    width: 100%;
+    height: 8vh; /* שינוי ל-vh כדי שגובה אחוזי יעבוד נכון ביחס למסך */
+    display: flex;       /* שימוש ב-Flexbox למרכוז מושלם */
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 150px;
+    height: auto; /* שומר על פרופורציות הלוגו */
+}
+
+#page {
+    flex: 1;
+    background-color: var(--color-container); /* שימוש במשתנה הרקע שהגדרת */
+    width: 100%;
+    height: 450px;
+    display: flex;          /* שימוש ב-Flexbox למרכוז התוכן בפנים */
+    flex-direction: column; /* מסדר את האלמנטים אחד מתחת לשני */
+    justify-content: center;
+    align-items: center;
+    
+    /* הגדרות פונט ברירת מחדל לעמוד */
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+    font-size: 30px;
+    font-weight: 100; 
+}
+
+.container1 {
+    width: 60%;
+    text-align: center;
+    padding: 15wv;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 200px;
+}
+
+/* תיקון: החלת הפונט והמשקל העבה על ה-ID באמצעות משתנה ה-CSS */
+#one {
+    font-family: "Google Sans", sans-serif;
+    font-weight: var(--bold-weight);
+    font-size: 54px; /* תואם ל-main-title */
+    font-weight: 200;
+}
+
+.text {
+    width: 100%;
+    font-family: "Google Sans", sans-serif;
+    font-weight: var(--bold-weight);
+    font-size: 18px; /* תואם ל-main-title */
+    font-weight: 100;
+    text-align: center;
+}
+
+.text-grey {
+        color: #696769;
+        margin-top: -30px;
+}
+
+#bth {
+    align-self: center;
+    /* margin-top: 15px; */
+    width: 6.5rem;
+    height: 8hv;
+    background-color: #1A73E8;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0px 22px;
+    font-family: "Google Sans", sans-serif;
+    font-weight: var(--bold-weight);
+    font-size: 14px; /* תואם ל-main-title */
+    font-weight: 100;
+}
+
+#bth:hover {
+    background-color: #1368d8;
+}
+
+.container {
+    padding-top: 15wv;
+    width: 100wv;
+    text-align: center;
+    padding: 15wv;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    min-height: 300px;
+}
+
+.box {
+    margin-top: 100px;
+    width: 25%;
+    border: 0.5px solid rgba(125, 125, 125, 0.253);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.photo {
+    width: 100%;
+
+}
+
+.photo:hover {
+    vector-effect: zoom-in;
+}
+
+.text-black {
+        color: #000000;
+}

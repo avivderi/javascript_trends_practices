@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manager contact</title>
+</head>
+<body>
+    <form action="/contact" method="post">
+        <label for="name">full name</label>
+        <br>
+        <input type="name"
+        id="name"
+        name="name"
+        required
+        placeholder="enter your full name"
+        minlength="2"
+        maxlength="50"
+        />
+        <br>
+
+        <label for="email">email</label>
+        <br>
+        <input id="email"
+        id="email"
+        name="email"
+        required
+        placeholder="enter your email"
+        />
+        <br>
+
+        <label for="checkbox">subject</label>
+        <br>
+        <select id="subject" name="subject">
+            <option value="" disabled selected>select your choseis</option>
+            <option value="bug">bug</option>
+            <option value="feature">feature</option>
+            <option value="question">question</option>
+            <option value="other">other</option>
+        </select>
+        <br>
+
+        <label for="message">message</label>
+        <br>
+        <input type="text"
+        id="message"
+        name="message"
+        required
+        minlength="10"
+        placeholder="tryning your message"
+        />
+        <br>
+
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

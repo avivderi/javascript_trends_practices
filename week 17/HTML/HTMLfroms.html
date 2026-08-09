@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הרשמה</title>
+</head>
+<body>
+    <form action="/register" method="post">
+        <label for="username">שם מלא</label>
+        <br>
+        <input type="text"
+        required
+        minlength="2"
+        maxlength="50"
+        id="username"
+        name="username"
+        placeholder="הקלד שם מלא"/>
+        <br>
+
+        <label for="email">אימייל</label>
+        <br>
+        <input type="email"
+        required
+        id="email"
+        name="email"
+        placeholder="הקלד מייל"/>
+        <br>
+
+        <label for="password">סיסמא</label>
+        <br>
+        <input type="password"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+        placeholder="הזן סיסמא"
+        />
+        <br>
+
+        <label for="age">גיל</label>
+        <br>
+        <input type="number"
+        id="age"
+        name="age"
+        min="13"
+        max="120"
+        placeholder="הכנס גיל"
+        />
+        <br>
+        
+        <label for="role">תפקיד</label>
+        <br>
+        <select id="role" name="role">
+            <option value="user">משתמש</option>
+            <option value="menager">מנהל</option>
+        </select>
+        <br>
+        <label for="TermsOfUse">הסכמה לתנאי השימוש</label>
+        <br>
+        <input type="checkbox"
+        required
+        value="yes"
+        id="TermsOfUse"
+        name="TermsOfUse"
+        />
+        <p>בלחיצה זו הנך מאשר את תנאי השימוש</p>
+        <label for="submit"></label>
+
+        <button>הרשמה</button>
+
+
+        
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* :root {
+  --ink: #18241f;
+  --muted: #5c6a63;
+  --paper: #eef2ef;
+  --surface: #fbfcfb;
+  --line: #cfd8d3;
+  --accent: #0d6a5a;
+  --accent-deep: #085246;
+  --accent-soft: #d5ebe4;
+  --hero-deep: #1a2e28;
+  --hero-mist: #c5d9d0;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4.5rem;
+
+  --max: 1180px;
+  --radius: 6px;
+}
+
+.app-name {
+    font-size: 2rem;
+  margin-bottom: 0.35rem;
+
+} */
+@import url('https://googleapis.com');
+
+:root {
+  --ink: #18241f;
+  --accent: #0d6a5a;
+  --line: #cfd8d3;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --max: 1180px;
+  --space-3: 0.5rem;
+  --space-4: 0.5rem;
+}
+
+
+.page {
+    background-color: #E4ECE6;
+    flex: 1;
+    margin: 0rem;
+}
+
+.head {
+  height: 2.3rem;
+  display: flex;
+  align-items: center;           /* יישור אנכי למרכז */
+  justify-content: space-between; /* דחיפת השם שמאלה והתפריט ימינה */
+  gap: var(--space-3);
+  max-width: var(--max);         /* מניעת הימרחות במסכים רחבים */
+  margin: 0 auto;                /* מרכוז ההדר במסך */
+  padding: 1.5rem var(--space-4); /* ריווח פנימי עליון וצידי */
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 5rem; /* רווח בין לינקים */
+  justify-content: space-around;
+}
+
+.app-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;           /* גודל בולט ואלגנטי */
+  letter-spacing: -0.03em;      /* כיווץ האותיות למראה הפרימיום */
+  color: var(--ink);
+}
+
+.menu a {
+  position: relative;
+  font-family: var(--font-body);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid transparent; /* קו תחתון בלתי נראה כברירת מחדל */
+  transition: all 0.2s ease;           /* מעבר חלק בשינוי הצבע */
+  gap: 15rem;
+    justify-content: space-around;
+}
+
+.menu a:hover {
+  color: var(--accent);                 /* משנה את הצבע לירוק אקצנט */
+  border-bottom-color: var(--accent);   /* מציג את הקו התחתון */
+}
+
+.container1 {
+    display: flex;
+    align-self: center;
+    height: 570px;
+    margin-bottom: 50px;
+}
+
+.img {
+    background-position: center;   /* ממרכז את התמונה כדי שהחלק החשוב לא ייחתך */
+  background-size: cover;        /* מתאים את התמונה באופן מושלם לכל רוחב וגובה */
+  background-repeat: no-repeat;  
+  width: 68%;
+}
+
+.bloced-green {
+    padding: 3.5rem;
+    width: 30%;
+    background-color: #1A2E28;
+}
+
+.mini-name {
+    color: #C4D9CC;
+    font-size: 1.3rem;
+}
+
+.Main-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: white;
+    font-size: 3rem;
+}
+
+.Secondary-title {
+    margin-top: -1rem;
+    color: #C4D9CC;
+    font-size: 1.2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.bth-green {
+    background-color: #1A2E28;
+    border: 0.8px solid #E4ECE6;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    color: #E4ECE6;
+}
+
+.text-button-g {
+    color: #C4D9CC;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;   
+    text-decoration: none; 
+}
+
+.bth-white {
+    background-color: #E4ECE6 ;
+    border: 0.8px solid #E4ECE6;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    color: #1A2E28;
+}
+
+.text-button-w {
+    color: #1A2E28;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem; 
+    text-decoration: none; 
+}
+
+.container2 {
+    display: flex;
+    align-self: center;
+    height: 570px;
+}
+
+.line1 {
+    display: flex;
+    align-self: center;
+}
