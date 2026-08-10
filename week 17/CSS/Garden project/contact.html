@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הגינה של מיכל - יצירת קשר</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <div class="container-row">
+        <nav class="menu">
+            <a href="home.html">דף הבית</a>
+            <a href="contact.html"><b>יצירת קשר</b></a>
+        </nav>
+
+        <div class="logo-store">
+            <img src="https://design-factory.co.il/wp-content/uploads/2024/10/%D7%92%D7%99%D7%A0%D7%94.png" alt="לןגן של האתר"/>
+        </div>
+        </div>
+    </header>
+
+    <div class="contact">
+        <h1 class="title">
+            יצירת קשר
+        </h1>
+        <h2 class="description">
+            שלחו עכשיו את הטופס ונשמח לשוחח איתכם בהקדם!
+        </h2>
+
+        <form class="forms" action="/api/contact">
+            <label for="name">שם מלא</label>
+            <br>
+            <input type="text"
+            required
+            id="name"
+            name="name"
+            minlength="2"
+            placeholder="מה השם שלך?"
+            />
+
+            <br>
+            <label for="email">אימייל</label>
+            <br>
+            <input type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="מה האימייל שלך?"
+            />
+
+            <br>
+            <label for="text">הודעה</label>
+            <br>
+            <textarea name="message"
+            id="message"
+            placeholder="תוכן ההודעה"
+            rows="4"></textarea>
+            
+            <br>
+            <button type="submit">שלח טופס</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container-row">
+        <nav class="menu">
+            <a href="home.html">דף הבית</a>
+            <a href="contact.html">יצירת קשר</a>
+        </nav>
+
+        <div class="logo-store">
+            <img src="https://design-factory.co.il/wp-content/uploads/2024/10/%D7%92%D7%99%D7%A0%D7%94.png" alt="לןגן של האתר"/>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

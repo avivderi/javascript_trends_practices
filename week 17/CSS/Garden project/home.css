@@ -1,0 +1,162 @@
+body {
+    padding: 5wv;
+    margin: 0px;
+    background-color: rgb(230, 253, 226);
+    flex: 1;
+}
+
+header {
+    flex: 1;
+    width: 100%;
+    height: 10hv;
+    background-color: white;
+    align-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* padding-left: 2%;
+    padding-right: 2%; */
+}
+
+.container-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-right: 4%;
+
+}
+
+.container-row a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    color: black;
+    font-size: 1.1rem;
+    gap: 1.2rem;
+    text-decoration: none;
+}
+
+.logo-store img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 0px;
+}
+
+.container {
+    padding: 5%;
+    text-align: center;
+    width: 90%;
+    height: 300px;
+    align-content: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.new-title {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+section {
+    padding: 5wv;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.1rem;
+}
+
+.box {
+    width: 80%;
+    margin: 5%;
+    padding: 5%;
+    background-color: white;
+    border-radius: 15px;
+    line-height: 0.2wv;
+}
+
+.box img{
+    width: 100%;
+    object-fit:fill;
+    border-radius: 15px;
+}
+
+.flower {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.description-flower {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.analitics {
+    margin-bottom: 10rem;
+    margin: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.data {
+    width:100%;
+    background-color: white;
+    border-radius: 15px;
+    gap: -1rem;
+    text-align: center;
+}
+
+.num {
+    font-size: 1.8rem;
+    color: rgb(29, 172, 4);
+    margin-bottom: -10px;
+    font-weight: 900;
+}
+
+.str {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+footer {
+    flex: 1;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    align-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.logo-footer img{
+    width: 150px;
+    object-fit: cover;
+    margin: 0px;
+}
+
+.container-footer {
+    display: flex;
+    font-size: 1.1rem;
+    gap: 1.2rem;
+    justify-content: center;
+    align-self:  center;
+    
+}
+
+.container-footer a{
+    text-decoration: none;
+    color: black;
+}

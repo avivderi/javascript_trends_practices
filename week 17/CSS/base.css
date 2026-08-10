@@ -1,0 +1,39 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+.product-card{
+display: flex;
+margin: 40px auto;
+border: 1px solid #ddd;
+border-radius: 12px;
+width: 700px;
+overflow: hidden;
+}
+
+.product-card-image{
+width: 45%;
+object-fit: cover;
+}
+
+.product-card-content{
+padding: 40px;
+gap: 24px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+button{
+padding: 10px 20px;
+}
+
+@media(max-width: 600px) {
+    .product-card {
+        display: flow-root;
+        width: 95%;
+
+    }
+}

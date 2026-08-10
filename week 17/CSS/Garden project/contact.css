@@ -1,0 +1,132 @@
+body {
+    padding: 5wv;
+    margin: 0px;
+    background-color: rgb(230, 253, 226);
+    flex: 1;
+    height: 450px;
+}
+
+header {
+    flex: 1;
+    width: 100%;
+    height: 10hv;
+    background-color: white;
+    align-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* padding-left: 2%;
+    padding-right: 2%; */
+}
+
+.container-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-right: 4%;
+
+}
+
+.container-row a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    color: black;
+    font-size: 1.1rem;
+    gap: 1.2rem;
+    text-decoration: none;
+}
+
+.logo-store img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 0px;
+}
+
+.contact {
+    padding: 5%;
+    text-align: center;
+    width: 90%;
+    height: 300px;
+    align-content: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.forms {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10%;
+    padding-top: 10%;
+}
+
+#name {
+    font-size: 1rem;
+    width: 85%;
+    border-radius: 10px;
+    height: 2.5rem;
+    border: 2px solid rgb(29, 172, 4);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#email {
+    font-size: 1rem;
+    width: 85%;
+    border-radius: 10px;
+    height: 2.5rem;
+    border: 2px solid rgb(29, 172, 4);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#message {
+    font-size: 1rem;
+    width: 85%;
+    border-radius: 10px;
+    height: 2.5rem;
+    border: 2px solid rgb(29, 172, 4);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+footer {
+    flex: 1;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    align-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.logo-footer img{
+    width: 150px;
+    object-fit: cover;
+    margin: 0px;
+}
+
+.container-footer {
+    display: flex;
+    font-size: 1.1rem;
+    gap: 1.2rem;
+    justify-content: center;
+    align-self:  center;
+    
+}
+
+.container-footer a{
+    text-decoration: none;
+    color: black;
+}
