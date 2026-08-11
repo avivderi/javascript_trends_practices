@@ -1,62 +1,79 @@
+:root {
+    --bg-main: rgb(230, 253, 226);
+    --bg-card: white;
+    --text-primary: black;
+    --border-color: rgb(29, 172, 4);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    padding: 5wv;
-    margin: 0px;
-    background-color: rgb(230, 253, 226);
-    flex: 1;
-    height: 450px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    flex: 1;
     width: 100%;
-    height: 10hv;
-    background-color: white;
-    align-content: center;
+    height: 10vh;
+    background-color: var(--bg-card);
+    display: flex;
+    align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* padding-left: 2%;
-    padding-right: 2%; */
 }
 
 .container-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
-    margin-right: 4%;
-
+    width: 90%;
+    margin: 0 auto;
 }
 
-.container-row a{
+.container-row a {
     text-decoration: none;
-    color: black;
+    color: var(--text-primary);
 }
 
 .menu {
     display: flex;
-    color: black;
+    color: var(--text-primary);
     font-size: 1.1rem;
     gap: 1.2rem;
     text-decoration: none;
 }
 
-.logo-store img{
+.logo-store img {
     width: 60px;
     height: 60px;
     object-fit: cover;
-    margin: 0px;
+    margin: 0;
 }
 
-.contact {
-    padding: 5%;
+.container {
+    /* padding: 5%; */
     text-align: center;
     width: 90%;
-    height: 300px;
-    align-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
 }
 
 .title {
+    margin-top: 5rem;
     font-size: 2.5rem;
     font-weight: 100;
+    padding-bottom: 5%;
 }
 
 .description {
@@ -65,56 +82,72 @@ header {
 }
 
 .forms {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    background-color: white;
+    background-color: var(--bg-card);
     border-radius: 10px;
-    margin-top: 10%;
-    padding-top: 10%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-#name {
+#name, #email, #message, #what {
+    font-family: inherit;
     font-size: 1rem;
-    width: 85%;
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
-    height: 2.5rem;
-    border: 2px solid rgb(29, 172, 4);
+    border: 2px solid var(--border-color);
     margin-bottom: 20px;
-    margin-top: 10px;
+    padding: 10px 15px;
+    outline: none;
 }
 
-#email {
-    font-size: 1rem;
-    width: 85%;
-    border-radius: 10px;
-    height: 2.5rem;
-    border: 2px solid rgb(29, 172, 4);
-    margin-bottom: 20px;
-    margin-top: 10px;
+#name, #email, #what{
+    margin: 1rem;
+    height: 3rem;
 }
 
 #message {
-    font-size: 1rem;
-    width: 85%;
-    border-radius: 10px;
-    height: 2.5rem;
-    border: 2px solid rgb(29, 172, 4);
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-footer {
-    flex: 1;
-    width: 100%;
-    height: 200px;
-    background-color: white;
-    align-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
+    margin: 1rem;
+    height: 150px;
+    resize: vertical;
 }
 
-.logo-footer img{
+button, input[type="submit"] {
+    background-color: var(--border-color);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--bg-card);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: auto;
+}
+
+.logo-footer img {
     width: 150px;
     object-fit: cover;
-    margin: 0px;
 }
 
 .container-footer {
@@ -122,11 +155,30 @@ footer {
     font-size: 1.1rem;
     gap: 1.2rem;
     justify-content: center;
-    align-self:  center;
-    
+    align-items: center;
+    margin-top: 15px;
 }
 
-.container-footer a{
+.container-footer a {
     text-decoration: none;
-    color: black;
+    color: var(--text-primary);
+}
+
+@media (min-width: 600px) {
+    .forms {
+        width: 80%;
+        padding: 5%;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-row {
+        width: 80%;
+    }
+    .forms {
+        width: 50%;
+        padding: 40px;
+        margin-bottom: 5%;
+    }
 }

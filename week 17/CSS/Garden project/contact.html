@@ -20,7 +20,7 @@
         </div>
     </header>
 
-    <div class="contact">
+    <div class="container">
         <h1 class="title">
             יצירת קשר
         </h1>
@@ -28,9 +28,11 @@
             שלחו עכשיו את הטופס ונשמח לשוחח איתכם בהקדם!
         </h2>
 
+        <section>
+            
+        </section>
         <form class="forms" action="/api/contact">
-            <label for="name">שם מלא</label>
-            <br>
+            <label for="name">שם מלא *</label>
             <input type="text"
             required
             id="name"
@@ -39,9 +41,7 @@
             placeholder="מה השם שלך?"
             />
 
-            <br>
-            <label for="email">אימייל</label>
-            <br>
+            <label for="email">אימייל *</label>
             <input type="email"
             name="email"
             id="email"
@@ -49,29 +49,34 @@
             placeholder="מה האימייל שלך?"
             />
 
-            <br>
+            <label for="what">מהי סיבת הפנייה? *</label>
+            <select name="what" id="what">
+                <option value="price">בירור מחירים</option>
+                <option value="sratus">בירור סטטוס משלוח והזמנה קיימת</option>
+                <option value="Events">הזמנה מותאמת אישית ועיצוב לאירועים</option>
+            </select>
+
             <label for="text">הודעה</label>
-            <br>
             <textarea name="message"
             id="message"
             placeholder="תוכן ההודעה"
             rows="4"></textarea>
             
-            <br>
             <button type="submit">שלח טופס</button>
         </form>
     </div>
 
-    <footer>
-        <div class="container-row">
-        <nav class="menu">
-            <a href="home.html">דף הבית</a>
-            <a href="contact.html">יצירת קשר</a>
-        </nav>
-
-        <div class="logo-store">
-            <img src="https://design-factory.co.il/wp-content/uploads/2024/10/%D7%92%D7%99%D7%A0%D7%94.png" alt="לןגן של האתר"/>
+    <footer class="footer">
+        <div class="logo-footer">
+            <img src="https://design-factory.co.il/wp-content/uploads/2024/10/%D7%92%D7%99%D7%A0%D7%94.png"
+                alt="לוגו של האתר" />
         </div>
+    
+        <div class="container-footer">
+            <nav class="menu">
+                <a href="home.html">דף הבית</a>
+                <a href="contact.html">יצירת קשר</a>
+            </nav>
         </div>
     </footer>
 </body>
