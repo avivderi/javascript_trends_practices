@@ -1,28 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./base.css">
+<meta charset="UTF-8">
+<title>טקסט עגול מסתובב</title>
+<style>
+  body {
+    background: #db1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .spin-element {
+    -webkit-animation: spin 15s linear infinite;
+    -moz-animation: spin 15s linear infinite;
+    animation: spin 15s linear infinite;
+  }
+
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  text {
+    fill: #fff;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+  }
+</style>
 </head>
 <body>
-    <article class="product-card">
-  <img
-    class="product-card-image"
-    src="https://picsum.photos/600/400"
-    alt="אוזניות אלחוטיות"
-  />
 
-  <section class="product-card-content">
-    <h2>אוזניות אלחוטיות</h2>
+<svg class="spin-element" width="220" height="220" viewBox="0 0 220 220">
+  <defs>
+    <!-- מסלול עגול שהטקסט "ידבק" אליו -->
+    <path id="circlePath"
+          d="M 110,110 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+          fill="none" />
+  </defs>
 
-    <p>אוזניות נוחות עם סוללה חזקה וסינון רעשים.</p>
+  <text>
+    <textPath href="#circlePath" startOffset="0%">
+      SCHOOLINER • DESIGN • CODE • SCHOOLINER • DESIGN • CODE •
+    </textPath>
+  </text>
+</svg>
 
-    <strong>₪299</strong>
-
-    <button type="button">הוספה לסל</button>
-  </section>
-</article>
 </body>
 </html>

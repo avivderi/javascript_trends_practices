@@ -1,3 +1,13 @@
+@import url('https://googleapis.com');
+
+.google-sans-text {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+
 :root {
     --bg-main: rgb(230, 253, 226);
     --bg-card: white;
@@ -21,6 +31,9 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     width: 100%;
     height: 10vh;
     background-color: var(--bg-card);
@@ -48,6 +61,16 @@ header {
     font-size: 1.1rem;
     gap: 1.2rem;
     text-decoration: none;
+}
+.menu a {
+    padding: 0.7rem;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 30px;
+}
+
+.menu a:hover {
+    border: 2px solid var(--text-accent);
+    border-radius: 30px;
 }
 
 .logo-store img {
