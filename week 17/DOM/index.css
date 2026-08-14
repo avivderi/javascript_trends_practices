@@ -1,0 +1,74 @@
+body{
+    background-color: #e6e3e3;
+    margin: 15%;
+    margin-top: 2%;
+    flex: 1;
+}
+
+header{
+    text-align: center;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5%;
+}
+
+.nameTitle{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.role{
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.box {
+    background-color: white;
+    margin: 3%;
+    width: 85%;
+    display: flex; /* תוספת */
+    flex-direction: column;
+    align-items: right;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+/* שילוב העיצוב המשותף לתגיות */
+.frontend, .backend, .devops {
+    display: flex;
+    padding: 5px 15px;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 3px;
+    color: white;
+   width: min-content;
+}
+
+/* הגדרת רקעים בלבד */
+.frontend { background-color: #3a82f6; }
+.backend { background-color: #15a34a; }
+.devops { background-color: #eb6219; }
+
+.language ul {
+    justify-content: right;
+    display: flex;
+    gap: 3px;
+    padding: 0;
+}
+
+.li {
+    /* הוסר ה-grid לגמרי */
+    list-style-type: none;
+    background-color: #ededed;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 100;
+    margin: 3px;
+    padding: 5px 10px; /* תוספת */
+    width: min-content;
+}
