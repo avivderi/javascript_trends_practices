@@ -33,10 +33,10 @@ export default function(roundRepo, playerRepo){
             
             if (handValue <= 21) {
                 const {playerCards, status} = round
-                await roundRepo.update(playerId, round)
+                await roundRepo.update(round._id, round)
                 return {playerCards, playerTotal: handValue, status, chips: (await playerRepo.find(playerId)).chips}
             }
-            await roundRepo.update(playerId, round)
+            await roundRepo.update(round._id, round)
             return await this.endGame(playerId, 'player_bust', round)
         },
 
@@ -90,7 +90,7 @@ export default function(roundRepo, playerRepo){
             const dealerCards = round.dealerCards
 
             round.status = finalStatus;
-            await roundRepo.update(playerId, round);
+            await roundRepo.update(round._id, round);
 
             return { playerCards, dealerCards, playerCardsValue, dealerCardsValue, status: finalStatus, chips: (await playerRepo.find(playerId)).chips}
         },
