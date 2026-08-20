@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="todoForm">
+        <input id="titleInput" placeholder="כותרת משימה" />
+        <span class="error-msg" id="titleError">כותרת חייבת להיות לפחות 3 תווים</span>
+        <button class="submit" type="submit">הוסף משימה</button>
+    </form>
+    <p id="loadingMsg">טוען משימות...</p>
+    <ul id="todoList"></ul>
+
+</body>
+<script src="fatch.js"></script>
+</html>

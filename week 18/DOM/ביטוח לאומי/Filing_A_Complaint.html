@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הגשת תלונה חדשה - הביטוח הלאומי</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-brand">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrcdkswhhxZni7jXBZxb9qF-MJJaknkT4D6UYxQsc3YQ&s=10" alt="לוגו ביטוח לאומי">
+                <div>
+                    <p class="name-web">הביטוח הלאומי</p>
+                    <p class="description-web">לצידך ברגעים החשובים של החיים</p>
+                </div>
+            </div>
+            <p class="service">השירות המקומי שלך</p>
+        </div>
+        <div class="menu-wrapper">
+            <nav class="menu">
+                <a href="./Complaints_Log.html">יומן התלונות</a>
+                <a href="./Filing_A_Complaint.html" class="active">הגשת תלונה חדשה</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <p class="breadcrumb">יומן התלונות / <b>הגשת תלונה</b></p>
+
+        <section class="page-header">
+            <div class="page-header-text">
+                <p>פנייה חדשה</p>
+                <h1>הגשת תלונה</h1>
+            </div>
+            <a href="./Complaints_Log.html" class="btn-secondary">חזרה ליומן</a>
+        </section>
+
+        <section class="info-msg">
+            <div class="info-icon">i</div>
+            <div class="info-content">
+                <h3>המידע נשאר אצלך</h3>
+                <p>הטופס נשמר בדפדפן בלבד ואינו מועבר לביטוח הלאומי.</p>
+            </div>
+        </section>
+
+        <section class="form-card">
+            <form>
+                <div class="form-group">
+                    <label>שם המתלונן/ת <span>*</span></label>
+                    <input type="text" class="form-control" id="report-name" placeholder="ישראל ישראלי" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>נושא התלונה</label>
+                        <select class="form-control" id="report-title">
+                            <option value="">בחר נושא...</option>
+                            <option value="call">זמן המתנה בטלפון</option>
+                            <option value="app">אתר / אפליקציה</option>
+                            <option value="branch">שירות בסניף</option>
+                            <option value="other">אחר</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>רמת דחיפות</label>
+                        <select class="form-control" id="report-priority">
+                            <option value="regular">רגילה</option>
+                            <option value="urgent">דחוף</option>
+                            <option value="critical">דחוף מאוד</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>תיאור התלונה <span>*</span></label>
+                    <textarea class="form-control" rows="5" id="report-details" placeholder="כתבו כאן את פרטי התלונה..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="history.back()">ביטול וחזרה</button>
+                    <button type="submit" class="btn-primary" id="send-report">שליחת התלונה</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrcdkswhhxZni7jXBZxb9qF-MJJaknkT4D6UYxQsc3YQ&s=10" height="30" alt="לוגו">
+        <p>האתר הזה לא שולח שום נתון לשום שרת - כי אין שרת. כל תלונה שרשמת כאן, נשמרת רק בדפדפן שבו היא נכתבה. זה מקום לפרוק תסכול ולא מוקד אמיתי.</p>
+    </footer>
+</body>
+<script src="./service.js"></script>
+</html>

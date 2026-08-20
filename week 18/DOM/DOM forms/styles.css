@@ -1,0 +1,56 @@
+body{
+    justify-items: center;
+}
+
+#todoForm{
+    width: 300px;
+    /* height: 300px; */
+    margin: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 15px;
+    background-color: rgb(234, 234, 253);
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}
+
+#titleInput{
+    border-radius: 30px;
+    border: 0px solid black;
+    padding: 10px;
+}
+
+#titleInput:focus{
+    border: 2px solid black;
+}
+
+.error-msg{
+    color: rgb(152, 10, 10);
+}
+
+.submit{
+    border-radius: 30px;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+#todoList{
+    list-style-type: none;
+    width: 300px;
+    margin: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 15px;
+    background-color: rgb(234, 234, 253);
+    text-align: start;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}

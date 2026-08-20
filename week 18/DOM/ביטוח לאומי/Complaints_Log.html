@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יומן תלונות אזרחים - הביטוח הלאומי</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-brand">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrcdkswhhxZni7jXBZxb9qF-MJJaknkT4D6UYxQsc3YQ&s=10" alt="לוגו ביטוח לאומי">
+                <div>
+                    <p class="name-web">הביטוח הלאומי</p>
+                    <p class="description-web">לצידך ברגעים החשובים של החיים</p>
+                </div>
+            </div>
+            <p class="service">השירות המקומי שלך</p>
+        </div>
+        <div class="menu-wrapper">
+            <nav class="menu">
+                <a href="./Complaints_Log.html" class="active">יומן התלונות</a>
+                <a href="./Filing_A_Complaint.html">הגשת תלונה חדשה</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <p class="breadcrumb">דף הבית / <b>יומן התלונות</b></p>
+
+        <section class="page-header">
+            <div class="page-header-text">
+                <p>שירות אישי</p>
+                <h1>יומן תלונות אזרחים</h1>
+                <h2>ביטוח לאומי לצידך ברגעים החשובים של החיים</h2>
+            </div>
+            <a href="./Filing_A_Complaint.html" class="btn-primary">הגשת תלונה חדשה</a>
+        </section>
+
+        <section class="info-msg">
+            <div class="info-icon">i</div>
+            <div class="info-content">
+                <h3>חשוב לדעת</h3>
+                <p>התלונות נשמרות במכשיר הזה בלבד ואינן נשלחות לביטוח הלאומי או לכל גורם אחר.</p>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h2 id="total-reports"></h2>
+                <p>תלונות שנרשמו</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="total-reporters"></h2>
+                <p>מתלוננים</p>
+            </div>
+            <div class="stat-card">
+                <h2>0</h2>
+                <p>תלונות שטופלו</p>
+            </div>
+        </section>
+
+        <section class="card-table">
+            <div class="table-header">
+                <div>
+                    <p>ריכוז פניות</p>
+                    <h3>התלונות שלי</h3>
+                </div>
+                <button class="btn-secondary">איפוס היומן</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>מספר</th>
+                        <th>שם המתלונן</th>
+                        <th>נושא</th>
+                        <th>דחיפות</th>
+                        <th>תוכן התלונה</th>
+                        <th>תאריך</th>
+                        <th>סטטוס</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- <tr>
+                        <td class="id-num"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="priority"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="status"></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrcdkswhhxZni7jXBZxb9qF-MJJaknkT4D6UYxQsc3YQ&s=10" height="30" alt="לוגו">
+        <p>האתר הזה לא שולח שום נתון לשום שרת - כי אין שרת. כל תלונה שרשמת כאן, נשמרת רק בדפדפן שבו היא נכתבה. זה מקום לפרוק תסכול ולא מוקד אמיתי.</p>
+    </footer>
+</body>
+<script src="./service.js"></script>
+</html>

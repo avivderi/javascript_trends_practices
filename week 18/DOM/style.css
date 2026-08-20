@@ -1,0 +1,146 @@
+:root {
+  --ink: #18241f;
+  --muted: #5c6a63;
+  --paper: #eef2ef;
+  --surface: #fbfcfb;
+  --line: #cfd8d3;
+  --accent: #0d6a5a;
+  --accent-deep: #085246;
+  --ok: #0d6a5a;
+  --bad: #b42318;
+  --bad-soft: #fde8e6;
+  --font: "Assistant", "IBM Plex Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  background: var(--paper);
+}
+
+h2 {
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.layout {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 2.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 800px) {
+  .layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+  }
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem 1.35rem 1.5rem;
+}
+
+form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+input.error {
+  border-color: var(--bad);
+  background: var(--bad-soft);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.check input {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+button {
+  justify-self: start;
+  padding: 0.6rem 1.1rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-deep);
+}
+
+.msg {
+  min-height: 1.4em;
+  margin: 0;
+  font-weight: 600;
+}
+
+.msg.ok {
+  color: var(--ok);
+}
+
+.msg.bad {
+  color: var(--bad);
+}
+#userList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+#userList li {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}

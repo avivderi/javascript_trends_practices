@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Forms — דוגמה לשיעור</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h2>1. טופס הוספת משתמש</h2>
+
+        <form id="userForm" novalidate>
+          <label>
+            שם
+            <input id="name" type="text" name="name" autocomplete="name" />
+          </label>
+
+          <label>
+            אימייל
+            <input id="email" type="email" name="email" autocomplete="email" />
+          </label>
+
+          <label>
+            תפקיד
+            <select id="role" name="role">
+              <option value="student">סטודנט/ית</option>
+              <option value="teacher">מרצה</option>
+              <option value="guest">אורח/ת</option>
+            </select>
+          </label>
+
+          <label class="check">
+            <input id="agree" type="checkbox" />
+            אני מסכים/ה לשמירת הפרטים
+          </label>
+
+          <p id="msg" class="msg" role="status"></p>
+
+          <button type="submit">שלח (POST)</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>2. רשימת משתמשים</h2>
+        <ul id="userList"></ul>
+      </section>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
